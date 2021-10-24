@@ -1,0 +1,2 @@
+# SetupGecko
+#include "wd_core.au3" #include "wd_helper.au3"  Local Enum $eFireFox = 0, _         $eChrome, _         $eIE  Local $aTestSuite[][2] = [["TestTimeouts", False],["TestNavigation", False],["TestElements", False],["TestScript", False],["TestCookies", False],["TestAlerts", True]]  Local Const $_TestType = $eIE ; $eFireFox Local $sDesiredCapabilities Local $iIndex Local $sSession  $_WD_DEBUG = True  Switch $_TestType     Case $eFireFox         SetupGecko()      Case $eChrome         SetupChrome()      Case $eIE         SetupIE()  EndSwitch
